@@ -38,7 +38,7 @@ const DrawerHeader = () => {
           sx={{
             height: "auto",
             maxWidth: 160,
-            maxHeight: 35,
+            maxHeight: 36,
             width: "100%",
             objectPosition: "left",
             objectFit: "contain",

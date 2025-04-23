@@ -40,9 +40,9 @@ const DrawerContent = () => {
       >
         {!isDashboard && (
           <>
+            {user && <StorageSummary />}
             <TreeNavigation scrollRef={scrollRef} hideWithDrawer={!isMobile} />
             <PageNavigation />
-            {user && <StorageSummary />}
           </>
         )}
         {isDashboard && <AdminPageNavigation />}

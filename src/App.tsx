@@ -176,6 +176,17 @@ export const useGeneratedTheme = (preferedDark?: boolean, subTheme?: boolean) =>
         ...themeConfig.palette,
         mode: mode,
       },
+      mixins: {
+        toolbar: {
+          minHeight: 48,
+          '@media (min-width:0px)': {
+            minHeight: 56,
+          },
+          '@media (min-width:600px)': {
+            minHeight: 92,
+          }
+        }
+      }
     };
 
     const t = createTheme(applyThemeWithOverrides(themeConfig));

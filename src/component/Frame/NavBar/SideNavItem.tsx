@@ -1,24 +1,30 @@
-import { Box, ButtonBase, darken, lighten, styled } from "@mui/material";
+import { Box, ButtonBase, darken, lighten, Palette, styled, Theme } from "@mui/material";
 import * as React from "react";
 import { NoWrapTypography } from "../../Common/StyledComponents.tsx";
+
+const getStyle = (theme: Theme, active: boolean) => {
+  if (theme.palette.mode == "light") {
+    return {
+      color: active ? `${theme.palette.primary.main} !important` : 'inherit',
+      backgroundColor: active ? "#fff !important" : "inherit",
+    }; 
+  } else {
+    return {
+      color: active ? `${theme.palette.primary.main} !important` : "inherit",
+      backgroundColor: active ? "#fff !important" : "inherit",
+    };
+  }
+}
 
 const StyledButtonBase = styled(ButtonBase)<{
   active?: boolean;
 }>(({ theme, active }) => ({
-  borderRadius: "90px",
+  borderRadius: "6px",
   display: "flex",
   justifyContent: "left",
   alignItems: "initial",
   width: "100%",
-  backgroundColor: active
-    ? `${
-        theme.palette.mode == "light"
-          ? lighten(theme.palette.primary.main, 0.7)
-          : darken(theme.palette.primary.main, 0.7)
-      }!important`
-    : "initial",
-  transition:
-    "background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+  ...getStyle(theme, !!active)
 }));
 
 export interface SideNavItemBaseProps {
@@ -33,13 +39,13 @@ export const SideNavItemBase = React.forwardRef(
 
 const StyledSideNavItem = styled(SideNavItemBase)<{ level?: number }>(({ theme, level }) => ({
   "&:hover": {
-    backgroundColor: theme.palette.action.hover,
+    color: theme.palette.primary.main,
   },
   padding: "4px",
   paddingLeft: `${28 + (level ?? 0) * 16}px`,
-  height: "32px",
+  height: "38px",
   display: "flex",
-  alignItems: "center",
+  alignItems: "center"
 }));
 
 export interface SideNavItemProps extends SideNavItemBaseProps {

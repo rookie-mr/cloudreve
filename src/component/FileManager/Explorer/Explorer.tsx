@@ -109,7 +109,7 @@ const Explorer = () => {
 
   return (
     <RadiusFrame
-      withBorder={!isMobile}
+      withBorder={false}
       square={isMobile}
       sx={{ flexGrow: 1, overflow: "auto" }}
       ref={selectContainerRef}
