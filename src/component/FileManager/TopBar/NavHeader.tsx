@@ -22,8 +22,8 @@ const NavHeader = () => {
           p: 0.5,
           overflow: "hidden",
           display: "flex",
+          background: "transparent"
         }}
-        withBorder
       >
         <Breadcrumb />
         <SearchIndicator />

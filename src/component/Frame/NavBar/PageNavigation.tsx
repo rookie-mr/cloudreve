@@ -112,7 +112,7 @@ export const SideNavItemComponent = ({ item }: { item: NavigationItem }) => {
         icon={
           <NavIconTransition
             sx={{ px: 0, py: 0, pr: "14px", height: "20px" }}
-            iconProps={{ fontSize: "small", color: "action" }}
+            iconProps={{ fontSize: "small" }}
             fileIcon={item.icon}
             active={active}
           />
