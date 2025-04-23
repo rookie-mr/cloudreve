@@ -112,7 +112,7 @@ export const ThumbBoxContainer = styled(Box)(() => ({
 }));
 
 export const ThumbBox = styled("img")<{ loaded: boolean }>(({ theme, loaded }) => ({
-  objectFit: "cover",
+  objectFit: "contain",
   width: "100%",
   height: "100%",
   transition: theme.transitions.create(["opacity", "border-radius"], {

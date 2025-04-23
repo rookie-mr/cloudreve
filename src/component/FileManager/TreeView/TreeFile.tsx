@@ -44,7 +44,10 @@ const CustomContentRoot = styled(SideNavItemBase)<{
   boxShadow: isDropOver
     ? `inset 0 0 0 2px ${theme.palette.primary.light}`
     : "none",
-  height: "32px",
+  height: "38px",
+  "&:hover": {
+    color: theme.palette.primary.main,
+  },
 }));
 
 const StyledTreeItemRoot = styled(TreeItem)(() => ({
@@ -224,7 +227,7 @@ const CustomContent = React.memo(
         return (
           <NavIconTransition
             sx={{ px: 0, py: 0, pr: "14px", height: "20px" }}
-            iconProps={{ fontSize: "small", color: "action" }}
+            iconProps={{ fontSize: "small" }}
             fileIcon={fileIcon.Icons}
             active={selected}
           />
