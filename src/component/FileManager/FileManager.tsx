@@ -13,6 +13,7 @@ import PaginationFooter from "./Pagination/PaginationFooter.tsx";
 import Sidebar from "./Sidebar/Sidebar.tsx";
 import SidebarDialog from "./Sidebar/SidebarDialog.tsx";
 import NavHeader from "./TopBar/NavHeader.tsx";
+import { RadiusFrame } from "../Frame/RadiusFrame.tsx";
 
 export const FileManagerIndex = {
   main: 0,
@@ -93,9 +94,16 @@ export const FileManager = ({ index = 0, initialPath, skipRender }: FileManagerP
         tabIndex={0}
         spacing={1}
       >
-        <NavHeader />
+        {/* <NavHeader /> */}
         <Box sx={{ display: "flex", flexGrow: 1, overflowY: "auto" }}>
-          <Explorer />
+          <RadiusFrame
+            withBorder={false}
+            square={isMobile}
+            sx={{ display: "flex", flexDirection: "column", flexGrow: 1, borderRadius: 2 }}
+          >
+            <NavHeader />
+            <Explorer />
+          </RadiusFrame>
           {index == FileManagerIndex.main && (isTablet ? <SidebarDialog /> : <Sidebar />)}
         </Box>
         <PaginationFooter />

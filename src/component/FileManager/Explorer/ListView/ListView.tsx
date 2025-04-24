@@ -96,6 +96,7 @@ const ListView = React.forwardRef(
           height: "100%",
           display: "flex",
           flexDirection: "column",
+          p: 2,
         }}
       >
         <ListHeader

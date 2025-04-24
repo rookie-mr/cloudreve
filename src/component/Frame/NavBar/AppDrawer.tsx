@@ -28,7 +28,6 @@ const DrawerContent = () => {
       <DrawerHeader />
       <Stack
         direction={"column"}
-        spacing={2}
         ref={scrollRef}
         sx={{
           px: 1,
@@ -40,9 +39,9 @@ const DrawerContent = () => {
       >
         {!isDashboard && (
           <>
-            {user && <StorageSummary />}
             <TreeNavigation scrollRef={scrollRef} hideWithDrawer={!isMobile} />
             <PageNavigation />
+            {user && <StorageSummary />}
           </>
         )}
         {isDashboard && <AdminPageNavigation />}

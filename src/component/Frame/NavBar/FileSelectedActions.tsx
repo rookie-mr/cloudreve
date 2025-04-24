@@ -93,7 +93,7 @@ const FileSelectedActions = forwardRef(({ targets }: FileSelectedActionsProps, r
           >
             <Dismiss fontSize={"small"} />
           </ActionButton>
-          <StyledActionButton disabled sx={{ color: (theme) => theme.palette.text.primary }}>
+          <StyledActionButton sx={{ color: (theme) => theme.palette.text.primary }}>
             {t("application:navbar.objectsSelected", {
               num: targets.length,
             })}
