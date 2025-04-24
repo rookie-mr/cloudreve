@@ -24,7 +24,7 @@ import { FmIndexContext } from "../FmIndexContext.tsx";
 import MoreActionMenu from "./MoreActionMenu.tsx";
 
 export const ActionButton = styled(Button)(({ theme }) => ({
-  // border: `1px solid ${theme.palette.divider}`,
+  border: `1px solid ${theme.palette.divider}`,
   color: theme.palette.text.primary,
 }));
 

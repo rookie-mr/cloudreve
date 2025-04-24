@@ -21,7 +21,7 @@ const RowContainer = styled(Box)<{
     bgColorHover = bgColor;
   }
   return {
-    minHeight: "36px",
+    minHeight: "56px",
     borderBottom: `1px solid ${theme.palette.divider}`,
     display: "flex",
     backgroundColor: bgColor,

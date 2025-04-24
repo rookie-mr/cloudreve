@@ -13,7 +13,8 @@ const NavHeader = () => {
       direction={"row"}
       spacing={1}
       sx={{
-        px: isMobile ? 2 : "initial",
+        px: isMobile ? 1 : 1,
+        py: !isMobile ? 1 : 2
       }}
     >
       <RadiusFrame
@@ -22,7 +23,7 @@ const NavHeader = () => {
           p: 0.5,
           overflow: "hidden",
           display: "flex",
-          background: "transparent"
+          background: "transparent",
         }}
       >
         <Breadcrumb />
