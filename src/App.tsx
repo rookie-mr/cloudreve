@@ -45,6 +45,9 @@ export const applyThemeWithOverrides = (themeConfig: ThemeOptions): ThemeOptions
         styleOverrides: {
           root: {
             textTransform: "none",
+            ":disabled": {
+              // borderColor: "transparent",
+            }
           },
         },
         defaultProps: {

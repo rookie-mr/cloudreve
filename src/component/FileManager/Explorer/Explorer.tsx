@@ -108,9 +108,9 @@ const Explorer = () => {
   );
 
   return (
-    <RadiusFrame
-      withBorder={false}
-      square={isMobile}
+    <Box
+      // withBorder={false}
+      // square={isMobile}
       sx={{ flexGrow: 1, overflow: "auto" }}
       ref={selectContainerRef}
       onContextMenu={onContextMenu}
@@ -151,7 +151,7 @@ const Explorer = () => {
           </Box>
         </CSSTransition>
       </SwitchTransition>
-    </RadiusFrame>
+    </Box>
   );
 };
 

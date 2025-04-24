@@ -8,7 +8,8 @@ import { RadiusFrame } from "../RadiusFrame.tsx";
 
 const StyledBox = styled(RadiusFrame)(({ theme }) => ({
   padding: theme.spacing(1, 2, 1, 2),
-  margin: theme.spacing(0, 2, 0, 2),
+  margin: theme.spacing(2, 2, 0, 2),
+  background: 'transparent'
 }));
 
 const StorageHeaderContainer = styled("div")(() => ({
@@ -18,13 +19,13 @@ const StorageHeaderContainer = styled("div")(() => ({
 }));
 
 const BorderLinearProgress = styled(LinearProgress)<{ warning: boolean }>(({ theme, warning }) => ({
-  height: 8,
-  borderRadius: 5,
+  height: 6,
+  borderRadius: 6,
   [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
+    backgroundColor: 'rgba(40,40,255,.1)',
   },
   [`& .${linearProgressClasses.bar}`]: {
-    borderRadius: 5,
+    borderRadius: 6,
     backgroundColor: warning ? theme.palette.warning.main : theme.palette.primary.main,
   },
   marginTop: theme.spacing(1),
@@ -41,7 +42,7 @@ const StorageSummary = memo(() => {
     }
   }, [capacity]);
   return (
-    <StyledBox withBorder>
+    <StyledBox>
       <StorageHeaderContainer>
         <Typography variant={"subtitle2"}>{t("application:navbar.storage")}</Typography>
       </StorageHeaderContainer>
@@ -53,7 +54,7 @@ const StorageSummary = memo(() => {
         />
       )}
       {!capacity && <Skeleton sx={{ mt: 1, height: 8 }} variant="rounded" />}
-      <Typography variant={"caption"} color={"text.secondary"}>
+      <Typography variant={"caption"} color={"text.secondary"} fontWeight={600}>
         {capacity ? (
           `${sizeToString(capacity.used)} / ${sizeToString(capacity.total)}`
         ) : (
