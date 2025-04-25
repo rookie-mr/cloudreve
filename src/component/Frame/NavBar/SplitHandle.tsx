@@ -58,7 +58,7 @@ const SplitHandle = (_props: SplitHandleProps) => {
             position: "fixed",
             width: 8,
             left: cursor,
-            zIndex: (theme) => theme.zIndex.drawer + 2,
+            zIndex: (theme) => theme.zIndex.drawer + 1,
           }}
         />
       )}

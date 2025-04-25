@@ -1,0 +1,30 @@
+{
+  "appId": "com.drive.app",
+  "productName": "Drive",
+  "directories": {
+    "output": "release",
+    "buildResources": "dist"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "package.json"
+  ],
+  "win": {
+    "target": ["nsis"],
+    "icon": "dist/icon.ico"
+  },
+  "mac": {
+    "target": ["dmg"],
+    "icon": "dist/icon.icns"
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "icon": "dist/icon.png"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  },
+  "asar": true
+} 

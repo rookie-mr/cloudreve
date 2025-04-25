@@ -39,10 +39,11 @@ export const SideNavItemBase = React.forwardRef(
 
 const StyledSideNavItem = styled(SideNavItemBase)<{ level?: number }>(({ theme, level }) => ({
   "&:hover": {
-    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.action.hover,
+    // color: theme.palette.primary.main,
   },
   padding: "4px",
-  paddingLeft: `${28 + (level ?? 0) * 16}px`,
+  paddingLeft: `${24 + (level ?? 0) * 16}px`,
   height: "38px",
   display: "flex",
   alignItems: "center"
@@ -74,7 +75,7 @@ const SideNavItem = React.forwardRef(
         >
           {icon}
         </Box>
-        <NoWrapTypography variant={"body2"}>{label}</NoWrapTypography>
+        <NoWrapTypography variant={"body2"} fontWeight={600}>{label}</NoWrapTypography>
       </StyledSideNavItem>
     );
   },

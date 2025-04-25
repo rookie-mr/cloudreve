@@ -46,8 +46,8 @@ const CustomContentRoot = styled(SideNavItemBase)<{
     : "none",
   height: "38px",
   "&:hover": {
-    color: theme.palette.primary.main,
-  },
+    // color: theme.palette.primary.main,
+  }
 }));
 
 const StyledTreeItemRoot = styled(TreeItem)(() => ({
@@ -269,6 +269,7 @@ const CustomContent = React.memo(
               textAlign: "left",
             }}
             variant={"body2"}
+            fontWeight={600}
           >
             {!props.loading && label}
             {props.loading && <Skeleton variant={"text"} width={75} />}
