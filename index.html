@@ -2,19 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="{pwa_small_icon}" sizes="64x64" />
+    <!-- <link rel="shortcut icon" href="{pwa_small_icon}" sizes="64x64" /> -->
     <meta
       name="viewport"
       content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,shrink-to-fit=no"
     />
     <meta name="theme-color" content="" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="description" content="{siteDes}" />
-    <title>{siteName}</title>
+    <title>智能网盘</title>
+    <!-- <meta name="description" content="{siteDes}" /> -->
+    <!-- <title>{siteName}</title>
     <script>
       window.subTitle = "{siteName}";
-    </script>
+    </script> -->
     <style>
+      :root {
+        --defaultThemeColor: rgba(0, 0, 0, 0.3);
+      }
+      body {
+        font-family: PingFang SC, Microsoft YaHei, miui, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, Helvetica;
+      }
       #app-loader {
         position: fixed;
         top: 0;
@@ -25,7 +32,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #F6F7FC;
+        background-color: #ededf0;
         z-index: 9999;
       }
       #app-loader .logo {
@@ -114,5 +121,5 @@
       });
     </script>
   </body>
-  {siteScript}
+  <!-- {siteScript} -->
 </html>

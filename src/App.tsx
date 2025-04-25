@@ -138,6 +138,13 @@ export const applyThemeWithOverrides = (themeConfig: ThemeOptions): ThemeOptions
           },
         },
       },
+      MuiTypography: {
+        styleOverrides: {
+          root: {
+           fontFamily: "PingFang SC, Microsoft YaHei, miui, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, Helvetica;" 
+          } 
+        }
+      }
     },
   };
 };

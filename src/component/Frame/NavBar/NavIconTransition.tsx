@@ -23,7 +23,7 @@ const NavIconTransition = ({
         {active && (
           <Fade key={"active"}>
             <span>
-              <Active sx={{ position: "absolute" }} {...iconProps} />
+              <InActive sx={{ position: "absolute" }} {...iconProps} />
             </span>
           </Fade>
         )}
