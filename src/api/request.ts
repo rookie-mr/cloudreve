@@ -25,7 +25,7 @@ export const defaultOpts: requestOpts = {
   skipBatchError: false,
 };
 
-export const ApiPrefix = "/api/v4";
+export const ApiPrefix = `${import.meta.env.VITE_API_BASE_URL}api/v4`;
 
 const instance = axios.create({
   baseURL: ApiPrefix,

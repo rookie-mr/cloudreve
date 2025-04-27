@@ -3,24 +3,24 @@
   "productName": "Drive",
   "directories": {
     "output": "release",
-    "buildResources": "dist"
+    "buildResources": "build"
   },
   "files": [
-    "dist/**/*",
+    "build/**/*",
     "electron/**/*",
     "package.json"
   ],
   "win": {
     "target": ["nsis"],
-    "icon": "dist/icon.ico"
+    "icon": "build/icon.ico"
   },
   "mac": {
     "target": ["dmg"],
-    "icon": "dist/icon.icns"
+    "icon": "build/icon.icns"
   },
   "linux": {
     "target": ["AppImage"],
-    "icon": "dist/icon.png"
+    "icon": "build/icon.png"
   },
   "nsis": {
     "oneClick": false,

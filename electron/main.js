@@ -9,22 +9,22 @@ function createWindow() {
     frame: isDev ? true : true,
     webPreferences: {
       preload: path.join(__dirname, './preload.js'),
-      nodeIntegration: false,
-      contextIsolation: true,
       webSecurity: false,
-      allowRunningInsecureContent: false
+      allowRunningInsecureContent: true,
+      nodeIntegration: true,
+      contextIsolation: false,
+      webviewTag: true,
+      enableRemoteModule: true,
+      serviceWorkers: true,
+      backgroundThrottling: false
     }
   })
 
   // 加载React应用
-  if (isDev) {
-    mainWindow.loadURL('http://localhost:5173')
-  } else {
-    mainWindow.loadFile(path.join(__dirname, '../dist/index.html'))
-  }
+  mainWindow.loadFile(path.join(__dirname, '../build/index.html'))
 
   // 打开开发者工具（开发环境）
-  if (true) { // TODO 区分环境
+  if (isDev) { // TODO 区分环境
     mainWindow.webContents.openDevTools()
   }
 }

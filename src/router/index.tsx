@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createHashRouter, Navigate } from "react-router-dom";
 import { App } from "../App.tsx";
 import ErrorBoundary from "../component/Common/ErrorBoundary.tsx";
 import HeadlessFrame from "../component/Frame/HeadlessFrame.tsx";
@@ -10,7 +10,7 @@ import SignIn from "../component/Pages/Login/Signin/SignIn.tsx";
 import SignUp from "../component/Pages/Login/Signup.tsx";
 import NoMatch from "../component/Pages/NoMatch.tsx";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     errorElement: <ErrorBoundary />,

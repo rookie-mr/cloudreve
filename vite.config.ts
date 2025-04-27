@@ -7,10 +7,11 @@ import { VitePWA } from "vite-plugin-pwa";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
 const backend = "http://localhost:5212";
-// const backend = "http://106.75.71.239:5212";
+// const backend = "http://pan.lovexinzip.com";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "./",
   plugins: [
     react(),
     VitePWA({

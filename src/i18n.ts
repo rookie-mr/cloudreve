@@ -31,7 +31,7 @@ i18n
       backendOptions: [
         {
           expirationTime: 7 * 24 * 60 * 60 * 1000, // 7 days
-          loadPath: "/locales/{{lng}}/{{ns}}.json",
+          loadPath: "locales/{{lng}}/{{ns}}.json",
         },
       ],
     },
